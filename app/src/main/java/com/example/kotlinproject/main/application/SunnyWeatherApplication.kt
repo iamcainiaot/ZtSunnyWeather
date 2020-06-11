@@ -11,6 +11,7 @@ import android.content.Context
 class SunnyWeatherApplication : Application() {
 
     companion object {
+        const val TOKEN_CAI_YUN = "0LxDISdNAoRIil9z"
         lateinit var context: Context
     }
 

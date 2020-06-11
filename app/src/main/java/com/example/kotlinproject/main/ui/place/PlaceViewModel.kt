@@ -9,7 +9,7 @@ import com.example.kotlinproject.main.logic.model.Place
 /**
  * @author zt
  * @date 2020/6/8 16:17
- * @description
+ * @description 城市相关的viewModel
  **/
 class PlaceViewModel : ViewModel() {
     private val searchLiveData = MutableLiveData<String>()
@@ -23,5 +23,11 @@ class PlaceViewModel : ViewModel() {
     fun searchPlaces(query: String) {
         searchLiveData.value = query
     }
+
+    fun savePlace(place: Place) = Repository.savePlace(place)
+
+    fun getSavedPlace() = Repository.getSavedPlace()
+
+    fun isPlaceSaved() = Repository.isPlaceSaved()
 
 }
